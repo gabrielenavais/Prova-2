@@ -1,0 +1,45 @@
+pessoa1 = []
+pessoa2 = []
+pessoa3 = []
+
+num1 = int(input(f'Quantos numeros você deseja digitar?: '))
+
+for count in range(num1):
+    num2 = input(f'Digite um número de 1 a 9: ')
+
+    if num2 in ('1234567890'):
+        pessoa1.append(num2)
+
+    else:
+        print(f'O caracter digitado não é aceito, por isso foi computado como 0.')
+
+
+
+print(f'Os numeros digitados foram: ')
+print(pessoa1)
+
+num1 = int(input(f'Quantos numeros você deseja digitar?: '))
+
+for count in range(num1):
+    num2 = input(f'Digite um número de 1 a 9: ')
+    pessoa2.append(num2)
+
+    if num2 in pessoa1:
+        pessoa3.append(int(num2))
+
+    elif num2 in ('1234567890'):
+        None
+    
+    else:
+        print(f'O caracter digitado não é aceito, por isso foi computado como 0.')
+
+print(f'Os numeros digitados foram: ')
+print(pessoa2)
+
+print('Numeros em comum: ')
+print(pessoa3)
+
+total = sum(pessoa3)
+
+print(f'A soma dos números comuns nas listas é: ')
+print(total)
